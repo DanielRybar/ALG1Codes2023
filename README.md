@@ -1,4 +1,4 @@
-# My codes from ALG1
+# Algoritmizace  a programování 1
 
 ## Konfigurace repozitáře
 ### Klonování repozitáře
@@ -22,3 +22,10 @@ $ git config --global user.name "Daniel Rybar"
 Rybar1-D-5391@a2-02-mti MINGW64 ~
 $ git config --global user.email "daniel.rybar1@tul.cz"
 ```
+
+### Větvení
+- implicitní je větev **main**, lepší je commitovat do jiné větve a když je to hotové, tak vytvořit **Pull request** a sjednotit větve
+
+### Issues
+- oznámení (pokud je hotovo), do Asignees přidat vyučující a odeslat
+- finální obsah je v **main**
