@@ -15,7 +15,7 @@
 - push
 
 ### Globální konfigurace (jméno a email)
-```
+```bash
 Rybar1-D-5391@a2-02-mti MINGW64 ~
 $ git config --global user.name "Daniel Rybar"
 
@@ -29,3 +29,28 @@ $ git config --global user.email "daniel.rybar1@tul.cz"
 ### Issues
 - oznámení (pokud je hotovo), do Asignees přidat vyučující a odeslat
 - finální obsah je v **main**
+
+## Java
+- verze **17**
+- **NetBeans 12.6**
+
+### Zvolení implicitní main class v NB
+- pravé tlačítko na projekt - Properties - Run - MainClass
+- spuštění aktuálně otevřeného kódu - **Shift+F6** (nemusí být main)
+
+### Zkompilovaný *.jar soubor
+- **Clean+Build**, potom bude v */projekt/dist/projekt.jar*
+```powershell
+java -jar "C:\Users\Rybar1-D-5391\Documents\NetBeansProjects\2324ALG1\dist\2324ALG1.jar"
+```
+
+### Spouštění z terminálu
+- kompilace (vznikne soubor **HelloWorld.class**, uvnitř bude zkompilovaný bytecode)
+```powershell
+C:\Users\Rybar1-D-5391\Documents>"C:\Program Files\Java\jdk-17.0.2\bin\javac" Hello_World.java
+```
+- spuštění
+```powershell
+C:\Users\Rybar1-D-5391\Documents>"C:\Program Files\Java\jdk-17.0.2\bin\java" HelloWorld <argumenty>
+Hello, World!
+```
