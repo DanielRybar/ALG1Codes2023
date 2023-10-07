@@ -45,7 +45,7 @@ public class Speed {
         double time = timeOut - timeIn;
         System.out.format("Čas strávený v úseku (sekundy): %.2f\n", time);
         
-        // v = s * t
+        // v = s / t
         double speed = (length / time) * 3.6; // km/h
         System.out.format("Rychlost (km/h): %.2f\n", speed);
    

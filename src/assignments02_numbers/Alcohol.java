@@ -52,7 +52,6 @@ public class Alcohol {
         double alcoholProportion; // podíl alkoholu ve vypitém nápoji
         while (true) {
             try {
-
                 alcoholProportion = sc.nextDouble();
                 if (alcoholProportion < 0) {
                     System.out.print("Neplatná hodnota. Opakujte: ");
