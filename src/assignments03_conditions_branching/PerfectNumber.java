@@ -26,6 +26,5 @@ public class PerfectNumber {
         
         boolean isPerfect = number == sum;
         System.out.println(isPerfect ? "Číslo je dokonalé." : "Číslo není dokonalé.");
-    }
-    
+    } 
 }
