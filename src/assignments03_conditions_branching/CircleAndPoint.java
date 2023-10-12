@@ -1,4 +1,4 @@
-package assignments02_numbers;
+package assignments03_conditions_branching;
 
 import java.util.Scanner;
 
@@ -38,15 +38,15 @@ public class CircleAndPoint {
         }
 
         switch (poloha) {
-            case uvnitr -> {
+            case uvnitr:
                 System.out.println("Bod leží uvnitř kružnice.");
-            }
-            case vne -> {
+                break;
+            case vne:
                 System.out.println("Bod leží mimo kružnici.");
-            }
-            case na -> {
+                break;
+            case na:
                 System.out.println("Bod leží na kružnici.");
-            }
+                break;
         }
     }
 
