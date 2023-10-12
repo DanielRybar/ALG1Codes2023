@@ -26,6 +26,16 @@ $ git config --global user.email "daniel.rybar1@tul.cz"
 ### Větvení
 - implicitní je větev **main**, lepší je commitovat do jiné větve a když je to hotové, tak vytvořit **Pull request** a sjednotit větve
 
+#### Přepnutí větví
+- vylistování vzdálených větví
+```bash
+git branch -r
+```
+- přepnutí
+```bash
+git checkout -b local_branch_name origin/remote_branch_name
+```
+
 ### Issues
 - oznámení (pokud je hotovo), do Asignees přidat vyučující a odeslat
 - finální obsah je v **main**
