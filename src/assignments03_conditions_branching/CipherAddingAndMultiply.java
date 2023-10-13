@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CipherAddingAndMultiply {
 
     private final static Scanner sc = new Scanner(System.in);
-    
+
     public static void main(String[] args) {
         /*
          Zapište program, který pro každé zadané kladné číslo vypíše jeho ciferný součet a ciferný součin. Program nechť 
@@ -16,15 +16,12 @@ public class CipherAddingAndMultiply {
         int[] ciphers = getCipherArray(number);
 
         int sum = 0;
-        for (int i = 0; i < ciphers.length; i++) {
-            sum += ciphers[i];
-        }
-        System.out.println("Součet cifer je: " + sum);
-        
         int multiplication = 1; // nula je agresivní
         for (int i = 0; i < ciphers.length; i++) {
+            sum += ciphers[i];
             multiplication *= ciphers[i];
         }
+        System.out.println("Součet cifer je: " + sum);
         System.out.println("Součin cifer je: " + multiplication);
     }
 
