@@ -1,8 +1,8 @@
-package assignments03_conditions_branching;
+package assignments04_homeworks;
 
 import java.util.Scanner;
 
-public class PerfectNumber {
+public class U28PerfectNumber {
     
     private static final Scanner sc = new Scanner(System.in);
 

@@ -1,9 +1,11 @@
-package assignments03_conditions_branching;
+package assignments04_homeworks;
 
-public class Rectangle {
+public class U33bRectangle {
 
     public static void main(String[] args) {
-
+        
+        // barevny obdelnik
+        
         int M = 20;
         int N = 10;
 

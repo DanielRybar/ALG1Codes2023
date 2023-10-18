@@ -1,6 +1,6 @@
-package assignments03_conditions_branching;
+package assignments04_homeworks;
 
-public class SquareAndStars {
+public class U33aSquare {
     public static void main(String[] args) {
         /*
          Zapište program, který načte celé číslo N a program vypíše „čtverec z ’*’ “ velikosti N (případně obdélník velikosti 
