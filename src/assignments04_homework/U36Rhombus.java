@@ -1,4 +1,4 @@
-package assignments04_homeworks;
+package assignments04_homework;
 
 public class U36Rhombus {
 
