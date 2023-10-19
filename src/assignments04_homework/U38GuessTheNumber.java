@@ -9,73 +9,67 @@ public class U38GuessTheNumber {
     private final static Random rand = new Random();
 
     public static void main(String[] args) {
-        System.out.println("Vítej v hře Hádání čísla!");
+        System.out.println(ConsoleColors.PURPLE_BOLD + "Vítej v hře Hádání čísla!");
 
         // menu
         while (true) {
-            System.out.println("\nVyber si akci:");
-            System.out.println("1. Hádám číslo");
-            System.out.println("2. Myslím si číslo, hádá počítač");
-            System.out.println("3. Ukončit hru");
-            System.out.print("Vyber akci: ");
+            System.out.println("\n" + ConsoleColors.BLUE + "Vyber si akci:");
+            System.out.println(ConsoleColors.BLUE + "1. Hádám číslo");
+            System.out.println(ConsoleColors.BLUE + "2. Myslím si číslo, hádá počítač");
+            System.out.println(ConsoleColors.BLUE + "3. Ukončit hru");
+            System.out.print(ConsoleColors.GREEN + "Zvol akci: ");
 
-            String choice = sc.next(); // String kvůli tomu, kdyby uživatel zadával nesmysly
+            char choice = sc.next().charAt(0);
 
             switch (choice) {
-                case "1":
+                case '1':
                     playAsGuesser();
                     break;
-                case "2":
+                case '2':
                     playAsThinker();
                     break;
-                case "3":
-                    System.out.println("Děkujeme za hru.");
+                case '3':
+                    System.out.println(ConsoleColors.PURPLE_BOLD + "Děkujeme za hru.");
+                    System.out.println();
                     sc.close();
                     return;
                 default:
-                    System.out.println("Neplatná volba. Zkus to znovu.");
+                    System.out.println(ConsoleColors.RED_BOLD + "Neplatná volba. Zkus to znovu.");
             }
         }
     }
 
     private static void playAsGuesser() {
-        System.out.print("Zadej dolní hranici rozsahu čísel: ");
-        int minRange = sc.nextInt();
-
-        System.out.print("Zadej horní hranici rozsahu čísel: ");
-        int maxRange = sc.nextInt();
+        int minRange = validateNumber("Zadej dolní hranici rozsahu čísel: ");
+        int maxRange = validateNumber("Zadej horní hranici rozsahu čísel: ");
 
         int numberToGuess = minRange + rand.nextInt(maxRange - minRange + 1);
         int attempts = 0;
 
-        System.out.println("Hádej číslo v rozsahu od " + minRange + " do " + maxRange);
+        System.out.println(ConsoleColors.BLUE + "Hádej číslo v rozsahu od " + minRange + " do " + maxRange);
 
         boolean guessed = false;
         while (!guessed) {
-            System.out.print("Tvůj tip: ");
-            int guess = sc.nextInt();
+            int guess = validateNumber("Tvůj tip: ");
             attempts++;
 
             if (guess == numberToGuess) {
-                System.out.println("Správně! Číslo " + numberToGuess + " bylo uhodnuto po " + attempts + " pokusech.");
+                System.out.println(ConsoleColors.PURPLE_UNDERLINED + "Správně! Uhodl jsi číslo " + numberToGuess + " po " + attempts + " pokusech.");
                 guessed = true;
             } else if (guess < numberToGuess) {
-                System.out.println("Myšlené číslo je větší.");
+                System.out.println(ConsoleColors.BLUE + "Myšlené číslo je větší.");
             } else {
-                System.out.println("Myšlené číslo je menší.");
+                System.out.println(ConsoleColors.BLUE + "Myšlené číslo je menší.");
             }
         }
     }
 
     private static void playAsThinker() {
-        System.out.print("Zadej dolní hranici rozsahu čísel: ");
-        int minRange = sc.nextInt();
+        int minRange = validateNumber("Zadej dolní hranici rozsahu čísel: ");
+        int maxRange = validateNumber("Zadej horní hranici rozsahu čísel: ");
 
-        System.out.print("Zadej horní hranici rozsahu čísel: ");
-        int maxRange = sc.nextInt();
-
-        System.out.println("Myslíš si číslo v rozsahu od " + minRange + " do " + maxRange);
-        System.out.println("Nyní se pokusím uhodnout číslo.");
+        System.out.println(ConsoleColors.BLUE + "Myslíš si číslo v rozsahu od " + minRange + " do " + maxRange);
+        System.out.println(ConsoleColors.BLUE + "Nyní se pokusím uhodnout číslo.");
 
         int attempts = 0;
 
@@ -89,22 +83,42 @@ public class U38GuessTheNumber {
             System.out.println("2. Moje číslo je menší");
             System.out.println("3. Moje číslo je větší");
 
-            System.out.print("Zvol akci: ");
-            String action = sc.next(); // opět abych nemusel dlouze validovat
+            System.out.print(ConsoleColors.GREEN + "Zvol akci: ");
+            char action = sc.next().charAt(0);
 
             switch (action) {
-                case "1":
-                    System.out.println("Správně! Uhodl jsem tvoje číslo " + guessedNumber + " po " + attempts + " pokusech.");
+                case '1':
+                    System.out.println(ConsoleColors.PURPLE_UNDERLINED
+                            + "Správně! Uhodl jsem tvoje číslo " + guessedNumber + " po " + attempts + " pokusech.");
                     guessed = true;
-                case "2":
+                case '2':
                     maxRange = guessedNumber - 1;
                     break;
-                case "3":
+                case '3':
                     minRange = guessedNumber + 1;
                     break;
                 default:
-                    System.out.println("Neplatná volba. Zkus to znovu.");
+                    System.out.println(ConsoleColors.RED + "Neplatná volba. Zkus to znovu.");
             }
         }
+    }
+
+    // pomocný podprogram pro validaci cisel
+    private static int validateNumber(String inputMessage) {
+        int num = 0;
+        boolean isValid = false;
+
+        do {
+            System.out.print(ConsoleColors.GREEN + inputMessage);
+            sc.nextLine(); // posuneme skener na dalsi radek
+            if (sc.hasNextInt()) {
+                num = sc.nextInt();
+                isValid = true;
+            } else {
+                System.out.println(ConsoleColors.RED_BOLD + "Zadal jsi neplatnou hodnotu. Zkus to znovu."); // zde by se dala predat i errormessage jako parametr
+            }
+        } while (!isValid);
+
+        return num;
     }
 }
