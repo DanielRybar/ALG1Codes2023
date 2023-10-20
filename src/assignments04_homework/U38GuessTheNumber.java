@@ -9,7 +9,9 @@ public class U38GuessTheNumber {
     private final static Random rand = new Random();
 
     public static void main(String[] args) {
+        System.out.println(ConsoleColors.PURPLE_BOLD + "===============================");
         System.out.println(ConsoleColors.PURPLE_BOLD + "Vítej v hře Hádání čísla!");
+        System.out.println(ConsoleColors.PURPLE_BOLD + "===============================");
 
         // menu
         while (true) {
@@ -29,7 +31,9 @@ public class U38GuessTheNumber {
                     playAsThinker();
                     break;
                 case '3':
+                    System.out.println(ConsoleColors.PURPLE_BOLD + "===============================");
                     System.out.println(ConsoleColors.PURPLE_BOLD + "Děkujeme za hru.");
+                    System.out.println(ConsoleColors.PURPLE_BOLD + "===============================");
                     System.out.println();
                     sc.close();
                     return;
@@ -42,7 +46,13 @@ public class U38GuessTheNumber {
     private static void playAsGuesser() {
         int minRange = validateNumber("Zadej dolní hranici rozsahu čísel: ");
         int maxRange = validateNumber("Zadej horní hranici rozsahu čísel: ");
-
+        
+        // pokud uzivatel zada max <= min; k probehnuti cyklu nemusi vubec dojit, proto while
+        while (maxRange <= minRange) {
+            System.out.println(ConsoleColors.RED_BOLD + "Horní hranice nemůže být menší nebo rovna dolní hranici!");
+            maxRange = validateNumber("Zadej horní hranici rozsahu čísel: ");
+        }
+        
         int numberToGuess = minRange + rand.nextInt(maxRange - minRange + 1);
         int attempts = 0;
 
@@ -67,6 +77,12 @@ public class U38GuessTheNumber {
     private static void playAsThinker() {
         int minRange = validateNumber("Zadej dolní hranici rozsahu čísel: ");
         int maxRange = validateNumber("Zadej horní hranici rozsahu čísel: ");
+        
+        // pokud uzivatel zada max <= min; k probehnuti cyklu nemusi vubec dojit, proto while
+        while (maxRange <= minRange) {
+            System.out.println(ConsoleColors.RED_BOLD + "Horní hranice nemůže být menší nebo rovna dolní hranici!");
+            maxRange = validateNumber("Zadej horní hranici rozsahu čísel: ");
+        }
 
         System.out.println(ConsoleColors.BLUE + "Myslíš si číslo v rozsahu od " + minRange + " do " + maxRange);
         System.out.println(ConsoleColors.BLUE + "Nyní se pokusím uhodnout číslo.");
