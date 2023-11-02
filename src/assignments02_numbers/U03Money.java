@@ -1,13 +1,13 @@
 package assignments02_numbers;
 import java.util.Scanner;
 
-public class Money {
+public class U03Money {
 
     public static void main(String[] args) {
         /*
          Zapište program, který pro zadanou celočíselnou hodnotu představující částku v korunách určí výčetku platidel, 
-        tedy počet bankovek a mincí, kterými lze zadanou sumu zaplatit. Ve svém programu se omezte na bankovky 
-        a mince v hodnotě 100, 50, 20, 10, 5, 2 a 1 Kč
+            tedy počet bankovek a mincí, kterými lze zadanou sumu zaplatit. Ve svém programu se omezte na bankovky 
+            a mince v hodnotě 100, 50, 20, 10, 5, 2 a 1 Kč
         */
         
         Scanner sc = new Scanner(System.in);

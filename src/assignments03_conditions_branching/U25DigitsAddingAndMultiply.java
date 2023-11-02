@@ -2,7 +2,7 @@ package assignments03_conditions_branching;
 
 import java.util.Scanner;
 
-public class CipherAddingAndMultiply {
+public class U25DigitsAddingAndMultiply {
 
     private final static Scanner sc = new Scanner(System.in);
 

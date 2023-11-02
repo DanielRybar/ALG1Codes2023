@@ -2,7 +2,7 @@ package assignments03_conditions_branching;
 
 import java.util.Scanner;
 
-public class Triangle {
+public class U04Triangle {
 
     private static final Scanner sc = new Scanner(System.in);
 

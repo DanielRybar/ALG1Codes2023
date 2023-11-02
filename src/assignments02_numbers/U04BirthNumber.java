@@ -1,6 +1,6 @@
 package assignments02_numbers;
 
-public class BirthNumber {
+public class U04BirthNumber {
 
     public static void main(String[] args) {
         /*

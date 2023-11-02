@@ -1,4 +1,4 @@
-package assignments04_homework;
+package assignments03_homework;
 
 public class U33aSquare {
     public static void main(String[] args) {

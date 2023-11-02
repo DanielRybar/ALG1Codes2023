@@ -2,7 +2,7 @@ package assignments03_conditions_branching;
 
 import java.util.Scanner;
 
-public class BirthNumberValidity {
+public class U15BirthNumberValidity {
     
     private static final Scanner sc = new Scanner(System.in);
 

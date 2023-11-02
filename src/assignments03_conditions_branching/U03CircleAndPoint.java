@@ -3,7 +3,7 @@ package assignments03_conditions_branching;
 import java.util.Scanner;
 
 // program na výpočet vzájemné polohy bodu a kružnice
-public class CircleAndPoint {
+public class U03CircleAndPoint {
 
     private static final Scanner sc = new Scanner(System.in);
 

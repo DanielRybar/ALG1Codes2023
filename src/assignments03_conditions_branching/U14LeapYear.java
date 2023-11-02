@@ -2,7 +2,7 @@ package assignments03_conditions_branching;
 
 import java.util.Scanner;
 
-public class LeapYear {
+public class U14LeapYear {
 
     private static final Scanner sc = new Scanner(System.in);
 

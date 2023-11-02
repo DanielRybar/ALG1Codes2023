@@ -2,7 +2,7 @@ package assignments02_numbers;
 
 import java.util.Scanner;
 
-public class Alcohol {
+public class U13Alcohol {
 
     public static void main(String[] args) {
 

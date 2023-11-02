@@ -2,7 +2,7 @@ package assignments02_numbers;
 
 import java.util.Scanner;
 
-public class Speed {
+public class U09_10Speed {
 
     public static void main(String[] args) {
         /*
