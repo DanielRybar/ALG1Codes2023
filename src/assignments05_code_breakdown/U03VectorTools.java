@@ -1,6 +1,6 @@
 package assignments05_code_breakdown;
 
-public final class VectorTools {
+public final class U03VectorTools {
 
     /*
      Vytvořte knihovní třídu VectorTools pro manipulaci s 3D vektory – s metodami pro délku vektoru, skalární 
@@ -9,7 +9,7 @@ public final class VectorTools {
         testování nezapomeňte na nepřesné zobrazení reálných čísel.. Metodám doplňte dokumentační komentáře. 
         Vytvořte program, kterým otestujete implementované metody.
      */
-    private VectorTools() {
+    private U03VectorTools() {
     }
 
     /**
