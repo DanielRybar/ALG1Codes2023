@@ -23,3 +23,12 @@
 	- vánoční úloha
 	- prezentace k semestrální práci
 	- semestrální práce (+dokumentace)
+
+### Ukázka nástroje Mermaid
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
