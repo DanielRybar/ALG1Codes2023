@@ -1,5 +1,7 @@
 # Algoritmizace  a programování 1
 
+* [PODMÍNKY ZÁPOČET](zapocet.md)
+
 ## Konfigurace repozitáře
 ### Klonování repozitáře
 1) Nový NetBeans projekt
