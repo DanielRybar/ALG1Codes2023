@@ -56,8 +56,12 @@ V hlavní metodě `Main` se již nachází samotné **načítání vstupů** od 
 | 5           	| **nevalidní vstup** - znak, řetězec, nesmysly              	| chybová hláška, opakované zadávání   	| chybová hláška, opakované zadávání   	| ANO    	|
 
 #### Screenshoty testů
-[Test 1](./src/semestralProject/img/test01.png)
-[Test 2](./src/semestralProject/img/test02.png)
-[Test 3](./src/semestralProject/img/test03.png)
-[Test 4](./src/semestralProject/img/test04.png)
-[Test 5](./src/semestralProject/img/test05.png)
+[Test 1](./img/test01.png)
+
+[Test 2](./img/test02.png)
+
+[Test 3](./img/test03.png)
+
+[Test 4](./img/test04.png)
+
+[Test 5](./img/test05.png)
