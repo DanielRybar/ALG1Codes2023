@@ -3,7 +3,7 @@ package semestralProject;
 import java.util.Scanner;
 
 /**
- * Uloha 06 - program vyhodnocuje soucet a soucin dilcich polynomu
+ * Uloha 06 - program vyhodnocuje soucet a soucin dilcich polynomu Za
  *
  * @author Daniel Rybar
  * @version 1.0 17/11/2023
@@ -34,29 +34,33 @@ public class U06PolySumAndProductRybar {
             System.out.println("===================================");
             System.out.println("Stupen prvniho polynomu:");
             int degree1 = validateNumber();
-
             if (degree1 < 0) {
-                System.out.println("Konec programu");
+                System.out.println("Zadal jsi zaporny stupen polynomu. Konec programu.");
                 end = true;
             } else {
                 int[] coefficients1 = readCoefficients(degree1, "prvniho");
-
+                
                 System.out.println("Stupen druheho polynomu:");
                 int degree2 = validateNumber();
-                int[] coefficients2 = readCoefficients(degree2, "druheho");
+                if (degree2 < 0) {
+                    System.out.println("Zadal jsi zaporny stupen polynomu. Konec programu.");
+                    end = true;
+                } else {
+                    int[] coefficients2 = readCoefficients(degree2, "druheho");
+                    
+                    // vytvoreni instanci jednotlivych polynomu
+                    Polynomial poly1 = new Polynomial(degree1, coefficients1);
+                    Polynomial poly2 = new Polynomial(degree2, coefficients2);
 
-                // vytvoreni instanci jednotlivych polynomu
-                Polynomial poly1 = new Polynomial(degree1, coefficients1);
-                Polynomial poly2 = new Polynomial(degree2, coefficients2);
+                    System.out.println("Prvni polynom: " + poly1);
+                    System.out.println("Druhy polynom: " + poly2);
 
-                System.out.println("Prvni polynom: " + poly1);
-                System.out.println("Druhy polynom: " + poly2);
+                    Polynomial sum = poly1.addPolynomials(poly2);
+                    Polynomial product = poly1.multiplyPolynomials(poly2);
 
-                Polynomial sum = poly1.addPolynomials(poly2);
-                Polynomial product = poly1.multiplyPolynomials(poly2);
-
-                System.out.println("Soucet polynomu: " + sum);
-                System.out.println("Soucin polynomu: " + product);
+                    System.out.println("Soucet polynomu: " + sum);
+                    System.out.println("Soucin polynomu: " + product);
+                }
             }
         } while (!end);
     }

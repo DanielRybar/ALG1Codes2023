@@ -1,6 +1,6 @@
 # Algoritmizace  a programování 1
 
-* [PODMÍNKY ZÁPOČET](zapocet.md)
+* [PODMÍNKY ZÁPOČET](./src/zapocet/zapocet.md)
 * [DOKUMENTACE K SEM. PRÁCI](./src/semestralProject/dokumentace.md)
 
 ## Konfigurace repozitáře
