@@ -1,6 +1,7 @@
 # Algoritmizace  a programování 1
 
 * [PODMÍNKY ZÁPOČET](zapocet.md)
+* [DOKUMENTACE K SEM. PRÁCI](./src/semestralProject/dokumentace.md)
 
 ## Konfigurace repozitáře
 ### Klonování repozitáře
