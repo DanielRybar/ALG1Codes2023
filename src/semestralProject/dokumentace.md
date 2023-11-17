@@ -1,7 +1,7 @@
-## Dokumentace k semestrální práci
-### Úloha 06 - Součet a součin polynomů
+# Dokumentace k semestrální práci
+## Úloha 06 - Součet a součin polynomů
 ---
-#### Specifikace
+### Specifikace
 Cílem úlohy je vyhodnotit **součet a součin** dvou zadaných **polynomů**. Vstupní polynomy jsou zadány **stupněm a jednotlivými koeficienty**. Program má umožnit při jednom spuštění zpracování **libovolného počtu** dvojic polynomů. Pro každý polynom bude zadán stupeň a jeho koeficienty. Program se má ukončit v případě, že bude zadán **záporný stupeň** prvního polynomu.
 Jelikož nemůžeme předvídat, jestli uživatel opravdu zadá celé číslo, když k tomu bude vyzván, přidal jsem do kódu i **validaci vstupu**. Narazil jsem také na chybu v ukázkovém kódu v zadání:
 ```
@@ -13,13 +13,13 @@ Druhy polynom: 2x^3 - 5
 ```
 Druhý polynom by měl být `2x^3 + 0x^2 - 5x + 0`, po úpravě tedy `2x^3 - 5x`. Tato hrubá nepřesnost v mém programu není.
 
-#### Návrh řešení
+### Návrh řešení
 V podstatě celou logiku aplikace - tedy součet a vynásobení polynomu jsem podle konvencí odsunul do **samostatné třídy** `Polynomial`. Tato třída obsahuje **parametrický konstruktor**, který přiřazuje do privátních atributů parametry předané při vytvoření instance. Obsahuje také dvě nejdůležitější metody - `addPolynomials` a `multiplyPolynomials`.
 Ve třídě se také nachází metoda pro výpis polynomu - `toString`. Tato metoda slouží k vypsání daného objektu v řetězcové reprezentaci. Klíčové slovo `override` znamená, že v podstatě **přepisuji** implicitní metodu `toString`. Kdybych nechal kompilátor, aby použil původní metodu, tak by v tomto případě vypsala jen **adresu do paměti**, jelikož třída je **referenční datový typ**. Takže nejen z tohoto důvodu, ale i kvůli výslednému formátování, jsem ji musel přeimplementovat.
 
 V hlavní metodě `Main` se již nachází samotné **načítání vstupů** od uživatele a jejich validace. Zajímavý je tady podprogram `validateNumber`, který zjišťuje, zda je na **vstupu skeneru číslo**, a pakliže není, tak nutí uživatele opakovat zadávání tak dlouho, dokud číslo nezadá.
 
-##### Slovní popis vybraných algoritmů
+#### Slovní popis vybraných algoritmů
 *Součet polynomů*
 ```
 - mám dva polynomy
@@ -46,7 +46,7 @@ V hlavní metodě `Main` se již nachází samotné **načítání vstupů** od 
 - pokud ne, zobrazím uživateli chybovou zprávu, s podmínkou nebudu dělat nic a opakuji celý cyklus
 ```
 
-#### Testování
+### Testování
 | Číslo testu 	| Typ testu, popis vstupů                                	| Očekávaný výsledek                   	| Skutečný výsledek                    	| Prošel 	|
 |-------------	|--------------------------------------------------------	|--------------------------------------	|--------------------------------------	|--------	|
 | 1           	| **běžné hodnoty** (ze zadání) - 1. st., malé koeficienty    	| viz zadání                           	| odpovídá zadání                      	| ANO    	|
@@ -55,7 +55,7 @@ V hlavní metodě `Main` se již nachází samotné **načítání vstupů** od 
 | 4           	| **limitní stav** - záporný stupeň polynomu, samé nuly      	| ukončení programu / prázdný výsledek 	| ukončení programu / prázdný výsledek 	| ANO    	|
 | 5           	| **nevalidní vstup** - znak, řetězec, nesmysly              	| chybová hláška, opakované zadávání   	| chybová hláška, opakované zadávání   	| ANO    	|
 
-#### Screenshoty testů
+### Screenshoty testů
 [Test 1](./img/test01.png)
 
 [Test 2](./img/test02.png)
