@@ -1,7 +1,7 @@
 # Algoritmizace  a programování 1
 
 * [PODMÍNKY ZÁPOČET](./src/zapocet/zapocet.md)
-* [DOKUMENTACE K SEM. PRÁCI](./src/semestralProject/dokumentace.md)
+* [DOKUMENTACE K SEM. PRÁCI](./src/semestralProject/U06PolySumAndProductRybarDocumentation.md)
 
 ## Konfigurace repozitáře
 ### Klonování repozitáře

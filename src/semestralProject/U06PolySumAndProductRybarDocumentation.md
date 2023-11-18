@@ -3,7 +3,7 @@
 ---
 ### Specifikace
 Cílem úlohy je vyhodnotit **součet a součin** dvou zadaných **polynomů**. Vstupní polynomy jsou zadány **stupněm a jednotlivými koeficienty**. Program má umožnit při jednom spuštění zpracování **libovolného počtu** dvojic polynomů. Pro každý polynom bude zadán stupeň a jeho koeficienty. Program se má ukončit v případě, že bude zadán **záporný stupeň** prvního polynomu.
-Jelikož nemůžeme předvídat, jestli uživatel opravdu zadá celé číslo, když k tomu bude vyzván, přidal jsem do kódu i **validaci vstupu**. Narazil jsem také na chybu v ukázkovém kódu v zadání:
+Tady je otázka, jak se zachovat, když uživatel zadá **záporný stupeň druhého polynomu**. Pokud dojde k této situaci, rozhodl jsem se **ukončit program** (stejně jako při zadání záporného stupně 1. polynomu). Jelikož nemůžeme předvídat, jestli uživatel opravdu zadá celé číslo, když k tomu bude vyzván, přidal jsem do kódu i **validaci vstupu**. Narazil jsem také na chybu v ukázkovém kódu v zadání:
 ```
 Stupen druheho polynomu:
 3
@@ -17,7 +17,7 @@ Druhý polynom by měl být `2x^3 + 0x^2 - 5x + 0`, po úpravě tedy `2x^3 - 5x`
 V podstatě celou logiku aplikace - tedy součet a vynásobení polynomu jsem podle konvencí odsunul do **samostatné třídy** `Polynomial`. Tato třída obsahuje **parametrický konstruktor**, který přiřazuje do privátních atributů parametry předané při vytvoření instance. Obsahuje také dvě nejdůležitější metody - `addPolynomials` a `multiplyPolynomials`.
 Ve třídě se také nachází metoda pro výpis polynomu - `toString`. Tato metoda slouží k vypsání daného objektu v řetězcové reprezentaci. Klíčové slovo `override` znamená, že v podstatě **přepisuji** implicitní metodu `toString`. Kdybych nechal kompilátor, aby použil původní metodu, tak by v tomto případě vypsala jen **adresu do paměti**, jelikož třída je **referenční datový typ**. Takže nejen z tohoto důvodu, ale i kvůli výslednému formátování, jsem ji musel přeimplementovat.
 
-V hlavní metodě `Main` se již nachází samotné **načítání vstupů** od uživatele a jejich validace. Zajímavý je tady podprogram `validateNumber`, který zjišťuje, zda je na **vstupu skeneru číslo**, a pakliže není, tak nutí uživatele opakovat zadávání tak dlouho, dokud číslo nezadá.
+V hlavní metodě `main` se již nachází samotné **načítání vstupů** od uživatele a jejich validace. Zajímavý je tady podprogram `validateNumber`, který zjišťuje, zda je na **vstupu skeneru číslo**, a pakliže není, tak nutí uživatele opakovat zadávání tak dlouho, dokud číslo nezadá.
 
 #### Slovní popis vybraných algoritmů
 *Součet polynomů*
@@ -57,11 +57,7 @@ V hlavní metodě `Main` se již nachází samotné **načítání vstupů** od 
 
 ### Screenshoty testů
 [Test 1](./img/test01.png)
-
 [Test 2](./img/test02.png)
-
 [Test 3](./img/test03.png)
-
 [Test 4](./img/test04.png)
-
 [Test 5](./img/test05.png)

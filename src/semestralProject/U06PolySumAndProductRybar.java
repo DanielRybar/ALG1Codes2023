@@ -3,7 +3,7 @@ package semestralProject;
 import java.util.Scanner;
 
 /**
- * Uloha 06 - program vyhodnocuje soucet a soucin dilcich polynomu Za
+ * Uloha 06 - program vyhodnocuje soucet a soucin dilcich polynomu
  *
  * @author Daniel Rybar
  * @version 1.0 17/11/2023
@@ -94,7 +94,7 @@ public class U06PolySumAndProductRybar {
                 num = sc.nextInt();
                 isValid = true;
             } else {
-                System.out.println("Neplatná hodnota (" + sc.next() + "). Opakuj zadávání."); // zde by se dala predat errormessage jako parametr
+                System.out.println("Neplatna hodnota (" + sc.next() + "). Opakuj zadavani."); // zde by se dala predat errormessage jako parametr
             }
         } while (!isValid);
 
