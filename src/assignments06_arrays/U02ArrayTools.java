@@ -114,7 +114,7 @@ public final class U02ArrayTools {
     }
 
     /**
-     * obraci poradi prvku v poli
+     * obraci poradi prvku v poli (vraci pole)
      *
      * @param arr pole cisel
      * @return obracene pole
@@ -125,6 +125,20 @@ public final class U02ArrayTools {
             revArr[i] = arr[arr.length - i - 1];
         }
         return revArr;
+    }
+
+    /**
+     * obraci poradi prvku v poli (upravuje stare pole)
+     *
+     * @param arr pole cisel
+     */
+    public static void reverseValues2(int[] arr) {
+        int temp;
+        for (int i = 0; i < arr.length/2; i++) {
+            temp = arr[i];
+            arr[i] = arr[arr.length-1-i];
+            arr[arr.length-1-i] = temp;
+        }
     }
 
     /**
@@ -141,6 +155,37 @@ public final class U02ArrayTools {
             arr[i] = rand.nextInt(max - min + 1) + min;
         }
         return arr;
+    }
+
+    /**
+     * testuje, zda je posloupnost v poli serazena sestupne
+     *
+     * @param a vstupni pole
+     * @return zda je pole serazeno sestupne
+     */
+    public static boolean isDescending(int[] a) {
+        for (int i = 0; i < a.length - 1; i++) {
+            if (a[i] < a[i + 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * testuje, zda je posloupnost v poli serazena vzestupne
+     *
+     * @param a vstupni pole
+     * @return zda je pole serazeno vzestupne
+     */
+    public static boolean isAscending(int[] a) {
+        for (int i = 0; i < a.length - 1; i++) {
+            if (a[i] > a[i + 1]) {
+                return false;
+            }
+        }
+        return true;
+
     }
 
     /**
