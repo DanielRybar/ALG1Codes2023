@@ -87,7 +87,7 @@ public final class U02ArrayTools {
      * @return nejmensi hodnota v poli
      */
     public static int findMinValue(int[] arr) {
-        int min = arr[0]; // prip. Integer.MIN_VALUE, pak prochazet od 0
+        int min = arr[0]; // prip. Integer.MAX_VALUE, pak prochazet od 0
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] < min) {
                 min = arr[i];
