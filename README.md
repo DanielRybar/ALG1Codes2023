@@ -2,6 +2,7 @@
 
 * [PODMÍNKY ZÁPOČET](./src/zapocet/zapocet.md)
 * [DOKUMENTACE K SEM. PRÁCI](./src/semestralProject/U06PolySumAndProductRybarDocumentation.md)
+* [PŘEHLED KE ZKOUŠCE](./src/assignments07_multidimensional_arrays/ALG1-Algoritmy-a-primitiva.pdf)
 
 ## Konfigurace repozitáře
 ### Klonování repozitáře
