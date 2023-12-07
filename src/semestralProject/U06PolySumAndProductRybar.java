@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Uloha 06 - program vyhodnocuje soucet a soucin dilcich polynomu
  *
  * @author Daniel Rybar
- * @version 1.0 17/11/2023
+ * @version 1.1 07/12/2023
  */
 public class U06PolySumAndProductRybar {
 
@@ -14,7 +14,7 @@ public class U06PolySumAndProductRybar {
 
     public static void main(String[] args) {
         /*
-        // testovani
+        // testovani metod
         // -6x^4 + 2x^3 + 9x^2 - 20x - 19
         Polynomial testPoly1 = new Polynomial(4, new int[] {-19, -20, 9, 2, -6});
         // 99x^8 + 12x^5 + 2x^2 - 91x + 3997
@@ -28,7 +28,6 @@ public class U06PolySumAndProductRybar {
         System.out.println("Soucet polynomu: " + testPoly1.addPolynomials(testPoly2));
         System.out.println("Soucin polynomu: " + testPoly1.multiplyPolynomials(testPoly2));
          */
-
         boolean end = false;
         do {
             System.out.println("===================================");
@@ -75,7 +74,7 @@ public class U06PolySumAndProductRybar {
     private static int[] readCoefficients(int degree, String order) {
         System.out.println("Koeficienty " + order + " polynomu:");
         int[] coefficients = new int[degree + 1]; // napr. pro 3st jsou 4 koeficienty
-        for (int i = degree; i >= 0; i--) {
+        for (int i = degree; i >= 0; i--) { // ukladani do pole v obracenem poradi
             coefficients[i] = validateNumber();
         }
         return coefficients;

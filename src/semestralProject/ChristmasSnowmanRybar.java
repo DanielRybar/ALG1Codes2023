@@ -48,7 +48,7 @@ public class ChristmasSnowmanRybar {
         }
 
         frame = new SnowmanFrame(height, width, isSnowing, isSun);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setLocationRelativeTo(null); // stred obrazovky
         frame.setVisible(true);
         frame.setResizable(false);
