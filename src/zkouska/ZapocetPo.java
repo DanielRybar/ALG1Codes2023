@@ -2,7 +2,7 @@ package zkouska;
 
 import java.util.Scanner;
 
-public class Metody {
+public class ZapocetPo {
 
     private static final Scanner sc = new Scanner(System.in);
 
